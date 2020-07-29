@@ -1,5 +1,6 @@
 <strong>List of All Prosepcts</strong><br>
 
+<%= link_to "New Article", new_prospect_path %>
 <table>
     <tr>
         <th>First Name</th>
@@ -12,6 +13,7 @@
         <td><%= prospect.first_name %></td>
         <td><%= prospect.last_name %></td>
         <td><%= prospect.email %></td>
+        <td><%= link_to "Show", prospect_path(prospect)%></td>
     </tr>
 <% end %>
 </table>
