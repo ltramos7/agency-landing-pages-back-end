@@ -1,0 +1,19 @@
+<strong>List of All Prosepcts</strong><br>
+
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+    </tr>
+
+    <% @prospects.each do |prospect| %>
+    <tr>
+        <td><%= prospect.first_name %></td>
+        <td><%= prospect.last_name %></td>
+        <td><%= prospect.email %></td>
+    </tr>
+<% end %>
+</table>
+
+

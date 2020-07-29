@@ -1,0 +1,15 @@
+<h1>Prospect Sign Up</h1>
+
+<!-- May need html tags such as <p></p> for a querySelect in the future. -->
+<%= form_with scope: :prospect, url: prospects_path, local: true do |form| %>
+    <%= form.label :"First Name" %><br>
+    <%= form.text_field :first_name %><br> 
+
+    <%= form.label :"Last Name" %><br>
+    <%= form.text_field :last_name %><br>  
+
+    <%= form.label :email %><br>
+    <%= form.text_field :email %><br> 
+    
+    <%= form.submit %>
+<% end %>
