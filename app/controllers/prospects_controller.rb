@@ -1,16 +1,19 @@
 class ProspectsController < ApplicationController
     def index
-        @prospects = Prospect.all
+        # @prospects = Prospect.all
+        prospect = Prospect.all
+
+        render json: prospect
     end
     
     def new
     end
 
     def create
-        @prospect = Prospect.new(prospect_params)
-
-        @prospect.save
-        redirect_to @prospect
+        prospect = Prospect.new(prospect_params)
+        render json: prospect
+        # @prospect.save
+        # redirect_to @prospect
     end
 
     def show
